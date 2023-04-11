@@ -1,0 +1,168 @@
+div {
+  display: grid;
+}
+
+p {
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  color: #ffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 25px;
+}
+
+/* .navigationBar {
+  border: 1px solid black;
+} */
+
+.uxioLago {
+  color: black;
+  /* border: 1px solid black; */
+  height: 200px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-left: 5vw;
+}
+
+.galeria {
+  display: grid;
+  height: 100vh;
+  /* margin: 20px 20px; */
+  grid-template-columns: repeat(5.1fr);
+  grid-template-rows: repeat(6.1fr);
+  grid-template-areas:
+    "foto1 foto1 foto1 foto2 foto2"
+    "foto1 foto1 foto1 foto2 foto2"
+    "foto3 foto3 foto4 foto4 foto4"
+    "foto3 foto3 foto4 foto4 foto4"
+    "foto5 foto5 foto5 foto6 foto6"
+    "foto5 foto5 foto5 foto6 foto6"
+    "foto7 foto7 foto7 foto8 foto8"
+    "foto7 foto7 foto7 foto8 foto8"
+    "foto9 foto9 foto9 foto8 foto8";
+  cursor: pointer;
+}
+
+.foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* position: relative; */
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.5 ease;
+  overflow: hidden;
+}
+
+.divFoto-1 {
+  grid-area: foto1;
+  position: relative;
+}
+.divFoto-2 {
+  grid-area: foto2;
+  position: relative;
+}
+.divFoto-3 {
+  grid-area: foto3;
+  position: relative;
+}
+.divFoto-4 {
+  grid-area: foto4;
+  position: relative;
+}
+.divFoto-5 {
+  grid-area: foto5;
+  position: relative;
+}
+.divFoto-6 {
+  grid-area: foto6;
+  position: relative;
+}
+.divFoto-7 {
+  grid-area: foto7;
+  position: relative;
+}
+.divFoto-8 {
+  grid-area: foto8;
+  position: relative;
+}
+.divFoto-9 {
+  grid-area: foto9;
+  position: relative;
+}
+
+.divFoto-1:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+.divFoto-2:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+.divFoto-3:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+.divFoto-4:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+.divFoto-5:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+.divFoto-6:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+.divFoto-7:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+.divFoto-8:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+.divFoto-9:hover .overlay {
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+
+@media (max-width: 425px) {
+  .uxioLago {
+    font-size: 20px;
+    height: 100px;
+  }
+  .galeria {
+    grid-template-areas:
+      "foto1 foto1 foto1"
+      "foto1 foto1 foto1"
+      "foto2 foto2 foto2"
+      "foto2 foto2 foto2"
+      "foto3 foto3 foto3"
+      "foto3 foto3 foto3"
+      "foto4 foto4 foto4"
+      "foto4 foto4 foto4"
+      "foto5 foto5 foto5"
+      "foto5 foto5 foto5"
+      "foto6 foto6 foto6"
+      "foto6 foto6 foto6"
+      "foto7 foto7 foto7"
+      "foto7 foto7 foto7"
+      "foto8 foto8 foto8"
+      "foto9 foto9 foto9"
+      "foto9 foto9 foto9";
+  }
+  p {
+    font-size: 16px;
+  }
+}
